@@ -1,0 +1,172 @@
+==== BRUTE FORCE: TRAVELING SALESMAN PROBLEM ====
+TSP with 5 cities: optimal distance = 221.21, time = 0.0001 seconds
+TSP with 6 cities: optimal distance = 273.26, time = 0.0002 seconds
+TSP with 7 cities: optimal distance = 275.16, time = 0.0015 seconds
+TSP with 8 cities: optimal distance = 291.44, time = 0.0126 seconds
+TSP with 9 cities: optimal distance = 244.82, time = 0.1022 seconds
+
+Testing different point distributions:
+Random distribution: distance = 257.47, time = 0.0016s
+Circular distribution: distance = 182.23, time = 0.0015s
+Clustered distribution: distance = 277.49, time = 0.0015s
+
+==== DIVIDE AND CONQUER: MERGE SORT ====
+Merge Sort with 100 elements:
+  Random: 0.0002s
+  Sorted: 0.0001s
+  Reverse: 0.0001s
+Merge Sort with 1000 elements:
+  Random: 0.0013s
+  Sorted: 0.0009s
+  Reverse: 0.0010s
+Merge Sort with 10000 elements:
+  Random: 0.0187s
+  Sorted: 0.0119s
+  Reverse: 0.0125s
+Merge Sort with 100000 elements:
+  Random: 0.2269s
+  Sorted: 0.1286s
+  Reverse: 0.1338s
+
+==== DECREASE AND CONQUER: BINARY SEARCH ====
+Array size 100, target beginning:
+  Binary search: 0.00000572s
+  Linear search: 0.00000310s
+  Speedup: 0.5416666666666666x
+Array size 100, target middle:
+  Binary search: 0.00000429s
+  Linear search: 0.00000381s
+  Speedup: 0.8888888888888888x
+Array size 100, target end:
+  Binary search: 0.00000238s
+  Linear search: 0.00000358s
+  Speedup: 1.5x
+Array size 100, target not present:
+  Binary search: 0.00000238s
+  Linear search: 0.00000429s
+  Speedup: 1.8x
+Array size 1000, target beginning:
+  Binary search: 0.00000238s
+  Linear search: 0.00000048s
+  Speedup: 0.2x
+Array size 1000, target middle:
+  Binary search: 0.00000405s
+  Linear search: 0.00002313s
+  Speedup: 5.705882352941177x
+Array size 1000, target end:
+  Binary search: 0.00000453s
+  Linear search: 0.00004554s
+  Speedup: 10.052631578947368x
+Array size 1000, target not present:
+  Binary search: 0.00000334s
+  Linear search: 0.00003195s
+  Speedup: 9.571428571428571x
+Array size 10000, target beginning:
+  Binary search: 0.00000262s
+  Linear search: 0.00000048s
+  Speedup: 0.18181818181818182x
+Array size 10000, target middle:
+  Binary search: 0.00000381s
+  Linear search: 0.00015616s
+  Speedup: 40.9375x
+Array size 10000, target end:
+  Binary search: 0.00000381s
+  Linear search: 0.00032163s
+  Speedup: 84.3125x
+Array size 10000, target not present:
+  Binary search: 0.00000405s
+  Linear search: 0.00045466s
+  Speedup: 112.17647058823529x
+Array size 100000, target beginning:
+  Binary search: 0.00000715s
+  Linear search: 0.00000238s
+  Speedup: 0.3333333333333333x
+Array size 100000, target middle:
+  Binary search: 0.00000739s
+  Linear search: 0.00153470s
+  Speedup: 207.6451612903226x
+Array size 100000, target end:
+  Binary search: 0.00001049s
+  Linear search: 0.00320125s
+  Speedup: 305.15909090909093x
+Array size 100000, target not present:
+  Binary search: 0.00000668s
+  Linear search: 0.00307989s
+  Speedup: 461.35714285714283x
+Array size 1000000, target beginning:
+  Binary search: 0.00001168s
+  Linear search: 0.00000453s
+  Speedup: 0.3877551020408163x
+Array size 1000000, target middle:
+  Binary search: 0.00001383s
+  Linear search: 0.01542377s
+  Speedup: 1115.3793103448277x
+Array size 1000000, target end:
+  Binary search: 0.00001359s
+  Linear search: 0.03140688s
+  Speedup: 2311.0526315789475x
+Array size 1000000, target not present:
+  Binary search: 0.00001144s
+  Linear search: 0.03174901s
+  Speedup: 2774.2708333333335x
+
+==== TRANSFORM AND CONQUER: GAUSSIAN ELIMINATION ====
+Test case 1 (2x2 system):
+A = [[2, 1], [1, 3]]
+b = [5, 6]
+Solution x = [1.8 1.4]
+Verification Ax: [5. 6.]
+
+Test case 2 (3x3 system):
+A = [[3, 2, -1], [2, -2, 4], [-1, 0.5, -1]]
+b = [1, -2, 0]
+Solution x = [ 1. -2. -2.]
+Verification Ax: [ 1.0000000e+00 -2.0000000e+00 -4.4408921e-16]
+
+Size 10x10, execution time: 0.0003s, error: 0.00000000
+Size 50x50, execution time: 0.0031s, error: 0.00000000
+Size 100x100, execution time: 0.0106s, error: 0.00000000
+Size 200x200, execution time: 0.0405s, error: 0.00000000
+
+Comparison with numpy.linalg.solve:
+Size 10x10:
+  Our implementation: 0.0003s
+  NumPy: 0.0001s
+  Speedup (NumPy vs. ours): 4.16x
+Size 50x50:
+  Our implementation: 0.0027s
+  NumPy: 0.0001s
+  Speedup (NumPy vs. ours): 44.19x
+Size 100x100:
+  Our implementation: 0.0111s
+  NumPy: 0.0002s
+  Speedup (NumPy vs. ours): 56.41x
+Size 200x200:
+  Our implementation: 0.0414s
+  NumPy: 0.0004s
+  Speedup (NumPy vs. ours): 105.05x
+
+==== GREEDY ALGORITHM: ACTIVITY SELECTION PROBLEM ====
+Test case 1:
+Start times: [1, 3, 0, 5, 8, 5]
+Finish times: [2, 4, 6, 7, 9, 9]
+Selected activities: [0, 1, 3, 4]
+Number of activities selected: 4
+
+Test case 2 (High conflict):
+Start times: [1, 2, 3, 4, 5, 6]
+Finish times: [3, 4, 5, 6, 7, 8]
+Selected activities: [0, 2, 4]
+Number of activities selected: 3
+
+Test case 3 (Low conflict):
+Start times: [1, 3, 5, 7, 9, 11]
+Finish times: [2, 4, 6, 8, 10, 12]
+Selected activities: [0, 1, 2, 3, 4, 5]
+Number of activities selected: 6
+
+Size 10: selected 4 activities, time: 0.0000s
+Size 100: selected 34 activities, time: 0.0000s
+Size 1000: selected 350 activities, time: 0.0003s
+Size 10000: selected 3510 activities, time: 0.0038s
+Size 100000: selected 35345 activities, time: 0.0741s
