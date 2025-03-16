@@ -1,3 +1,8 @@
+#Karlo Robert C. Wagan
+#BSCS 3
+#ITP 6
+#Final Requirements
+
 # 1. BRUTE FORCE: TRAVELING SALESMAN PROBLEM
 import itertools
 import math
